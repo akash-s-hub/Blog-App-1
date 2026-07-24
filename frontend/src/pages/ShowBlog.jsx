@@ -12,7 +12,7 @@ const ShowBlog = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get(`http://localhost:3000/blogs/${blogid}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/blogs/${blogid}`);
       setBlog(response.data.blog);
     } catch (err) {
       console.error("Error: ", err);
@@ -43,7 +43,7 @@ const ShowBlog = () => {
   }
 
   return (
-    <div className="pt-16 px-5 h-screen w-full">
+    <div className="pt-16 px-10 h-screen w-full">
       <h2 className="mt-2 font-bold text-3xl mb-5">{blog.blogTitle}</h2>
       <p>{blog.blogDescription}</p>
     </div>

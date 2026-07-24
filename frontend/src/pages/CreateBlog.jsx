@@ -16,7 +16,7 @@ const CreateBlog = () => {
     setIsSubmitting(true)
 
     try {
-      await axios.post("http://localhost:3000/create-blog", data)
+      await axios.post(`${import.meta.env.VITE_API_URL}/create-blog`, data)
       navigate("/blogs")
       e.target.reset();
     } catch (e) {
