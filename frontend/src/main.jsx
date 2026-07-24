@@ -8,11 +8,13 @@ import CreateBlog from './pages/CreateBlog.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import Layout from './components/Layout.jsx';
 import ShowBlog from './pages/ShowBlog.jsx';
+import HomePage from './pages/HomePage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route path="" element={<HomePage />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="blogs/:blogid" element={<ShowBlog />} />
         <Route path="create-blog" element={<CreateBlog />} />

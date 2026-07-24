@@ -12,7 +12,6 @@ const Blogs = () => {
       setLoading(true);
       setError(null);
       const response = await axios.get(`${import.meta.env.VITE_API_URL}/blogs`);
-      // const response = await axios.get(`http://localhost:3000/blogs`);
       setBlogs(response.data.blogs);
     } catch (e) {
       console.error(e.message);
