@@ -3,7 +3,7 @@ import Header from "./Header"
 
 const Layout = ({ children }) => {
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-full">
       <Header />
       <Outlet />
     </div>

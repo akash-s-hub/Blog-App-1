@@ -43,9 +43,9 @@ const ShowBlog = () => {
   }
 
   return (
-    <div className="pt-16 px-10 h-screen w-full">
+    <div className="py-16 px-10 min-h-screen w-full">
       <h2 className="mt-2 font-bold text-3xl mb-5">{blog.blogTitle}</h2>
-      <p>{blog.blogDescription}</p>
+      <div className="whitespace-pre-line">{blog.blogDescription}</div>
     </div>
   )
 }
