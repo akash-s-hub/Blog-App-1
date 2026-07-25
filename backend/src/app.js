@@ -70,4 +70,16 @@ app.post("/create-blog", async (req, res) => {
 
 })
 
+app.delete("/blogs/:blogid", async (req, res) => {
+  const { blogid } = req.params;
+
+  const blog = await blogModel.findOneAndDelete({
+    _id: blogid
+  });
+
+  res.status(200).json({
+    message: "blog deleted successfully"
+  })
+})
+
 module.exports = app;

@@ -9,6 +9,7 @@ import PageNotFound from './pages/PageNotFound.jsx';
 import Layout from './components/Layout.jsx';
 import ShowBlog from './pages/ShowBlog.jsx';
 import HomePage from './pages/HomePage.jsx';
+import DeleteBlog from './pages/DeleteBlog.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<Layout />}>
         <Route path="" element={<HomePage />} />
         <Route path="blogs" element={<Blogs />} />
+        <Route path="delete" element={<DeleteBlog />} />
         <Route path="blogs/:blogid" element={<ShowBlog />} />
         <Route path="create-blog" element={<CreateBlog />} />
       </Route>
